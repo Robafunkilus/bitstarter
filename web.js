@@ -1,10 +1,11 @@
 var express = require('express');
+var fs = require('fs');
 var app = express();
 var buffer = new Buffer("Mandood!!!!\n  What\'s up dudester?\n--Rob P","utf-8");
-var indexContent = fs.readFileSync(index.html);
+var indexContent = fs.readFileSync('index.html');
 //indexContent.copy(buffer);
 //buffer.write( = fs.readFileSync(index.html);
-
+console.log(indexContent.toString());
 
 
 
@@ -15,7 +16,7 @@ var indexContent = fs.readFileSync(index.html);
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(buffer.toString());//'Mandood!!!!\n  What\'s up dudester?\n--Rob P');
+  response.send(indexContent.toString());
 });
 
 var port = process.env.PORT || 5000;
