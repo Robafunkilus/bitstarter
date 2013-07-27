@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var buffer = new Buffer("Mandood!!!!\n  What\'s up dudester?\n--Rob P","utf-8");
-var buffer = fs.readFileSync(index.html);
+//var buffer = fs.readFileSync(index.html);
 
 
 
