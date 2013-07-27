@@ -13,7 +13,7 @@ var buffer = new Buffer("Mandood!!!!\n  What\'s up dudester?\n--Rob P","utf-8");
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(buf.toString(buffer));//'Mandood!!!!\n  What\'s up dudester?\n--Rob P');
+  response.send(buffer.toString());//'Mandood!!!!\n  What\'s up dudester?\n--Rob P');
 });
 
 var port = process.env.PORT || 5000;
