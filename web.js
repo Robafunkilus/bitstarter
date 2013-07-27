@@ -1,17 +1,8 @@
 var express = require('express');
 var fs = require('fs');
 var app = express();
-var buffer = new Buffer("Mandood!!!!\n  What\'s up dudester?\n--Rob P","utf-8");
 var indexContent = fs.readFileSync('index.html');
-//indexContent.copy(buffer);
-//buffer.write( = fs.readFileSync(index.html);
 console.log(indexContent.toString());
-
-
-
-
-
-
 
 app.use(express.logger());
 
